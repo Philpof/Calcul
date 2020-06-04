@@ -29,16 +29,16 @@
   <?php
 
     $multiplicateur = 0;
-    $chiffre_choisi = $_POST["chiffre"];
 
-    if (empty ($_POST["chiffre"])) {
+    if (empty($_POST["chiffre"])) {
       echo "A vous de jouer !";
     }
     else {
+        $chiffre_choisi = $_POST["chiffre"]; // variable se créé après avoir vérifier si le champ est vide ou pas (Owsald, Sergio et Robin)
 
-      if (is_numeric ($chiffre_choisi)) {
+      if (is_numeric($chiffre_choisi)) {
 
-        if (ctype_digit ($chiffre_choisi)) {
+        if (ctype_digit($chiffre_choisi)) {
 
           if ($chiffre_choisi > 10) {
             echo "Le chiffre choisi est supérieur à 10.";
